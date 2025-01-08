@@ -1,21 +1,24 @@
-import { useState } from 'react'
-import './App.css'
-import {Button } from "@/components/ui/button";
+import './App.css';
+import HeroSection  from '@/components/home/HeroSection';
+import Footer from '@/components/common/Footer';
+import AboutSection from '@/components/home/AboutusSection';
+import FloatingNav from '@/components/common/FloatingNav';
+import TestimonialsSection from '@/components/home/TestimonialsSection';
+import ShowCaseSection from '@/components/home/ShowCaseSection';
+import CallToAction from '@/components/home/CallToAction';
 
 function App() {
-  const [count, setCount] = useState(0)
+
 
   return (
     <>
-
-      <h1>Rovaa</h1>
-      <div className="card">
-        <Button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </Button>
-  
-      </div>
-      
+      <FloatingNav />
+      <HeroSection />
+      <ShowCaseSection />
+      <AboutSection />
+      <TestimonialsSection />
+      <CallToAction />
+      <Footer />
     </>
   )
 }
